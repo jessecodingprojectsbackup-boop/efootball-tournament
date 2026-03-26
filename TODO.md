@@ -1,37 +1,32 @@
 # Deployment TODO
 
-## Plan Steps:
+## Plan Steps (Approved - Proceeding):
 
-### 1. Git Setup (Pending Git install)
-- [x] Create .gitignore
-- [ ] Install Git
+### 1. Git Setup
+- [ ] Install/verify Git
 - [ ] `git init`
+- [ ] Add remote: git remote add origin https://github.com/jessecodingprojectsbackup-boop/efootball-tournament.git
 - [ ] `git add .`
-- [ ] `git commit -m "Initial commit"`
-- [ ] Push to GitHub
+- [ ] `git commit -m \"Initial commit - ready for deployment\"`
+- [ ] `git branch -M main`
+- [ ] `git push -u origin main`
+- [ ] Create GitHub repo if not exists (check https://github.com/jessecodingprojectsbackup-boop/efootball-tournament)
 
-### 2. Code Edits for Deploy ✅ COMPLETE
-- [x] Update backend/server.js: process.env.PORT
-- [x] Update frontend/vite.config.js: base='/', env API URL
-- [x] Add vercel.json for rewrites
-- [x] Fixed hardcoded localhost APIs in KnockoutStages.jsx
-- [x] Created .env.example
+### 2. Frontend Deploy (Vercel)
+- [ ] Connect frontend/ to Vercel (GitHub integration)
+- [ ] Test: cd frontend && npm install && npm run build
+- [ ] Deploy (auto on push)
 
-### 3. Frontend Deploy (Vercel/Netlify)
-- [ ] Create GitHub repo
-- [ ] Connect to Vercel (frontend dir)
-- [ ] Test npm run build
-- [ ] Deploy
-
-### 4. Backend Deploy (Render)
-- [ ] Connect backend dir to Render Web Service
+### 3. Backend Deploy (Render - https://efootball-tournament-2kyd.onrender.com)
+- [ ] Connect backend/ to Render Web Service (GitHub repo)
 - [ ] Build: npm install
 - [ ] Start: npm start
-- [ ] Note: Free tier ephemeral data (resets on restart)
+- [ ] Verify running
 
-### 5. Connect & Test ✅
-- [ ] Update vercel.json rewrite destination to backend URL
-- [ ] Redeploy frontend
-- [ ] Test live app (login admin/admin123)
+### 4. Connect & Test
+- [ ] Confirm vercel.json rewrites to Render URL
+- [ ] Redeploy frontend if needed
+- [ ] Test live: admin/admin123 login, create data, knockout flow
 
-**Progress: 3/5**
+**Current Step: 1/4 - Git Setup**  
+**Progress: 0/4**
